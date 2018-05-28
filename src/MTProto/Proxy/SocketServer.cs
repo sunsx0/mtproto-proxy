@@ -54,7 +54,9 @@ namespace MTProto.Proxy
                 {
                     return;
                 }
+                ServerSocket.Shutdown(SocketShutdown.Both);
                 ServerSocket.Close();
+                using (ServerSocket) ;
                 ServerSocket = null;
                 Works = false;
             }

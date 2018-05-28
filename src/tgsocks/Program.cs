@@ -63,6 +63,11 @@ namespace tgsocks
             proxyManager.Connections.OnConnectionRemoved += Connections_OnConnectionRemoved;
 
             Log("OK, Load config complete, starting");
+            Console.CancelKeyPress += (a, b) => {
+                Log("Stopping...");
+                proxyManager.Stop();
+                Log("Stopped");
+            };
             proxyManager.Start();
             Log("Server started");
             System.Threading.Thread.Sleep(System.Threading.Timeout.Infinite);

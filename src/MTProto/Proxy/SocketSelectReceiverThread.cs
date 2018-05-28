@@ -33,6 +33,7 @@ namespace MTProto.Proxy
                     Start();
                 }
             }
+            connection.Socket.ReceiveTimeout = 30000;
         }
         public void RemoveConnection(ProxyConnection connection)
         {
@@ -146,6 +147,10 @@ namespace MTProto.Proxy
                     foreach (var skt in ToError)
                     {
                         SocketConnections[skt].Close();
+                    }
+                    if (ToRead.Count + ToError.Count != 0)
+                    {
+                        Waiter.SleepMicro(Timeout);
                     }
                 }
             }
