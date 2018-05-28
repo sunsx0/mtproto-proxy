@@ -8,7 +8,7 @@
   ],
   "DataCentres": [ "149.154.175.50", "149.154.167.50", "149.154.175.100", "91.108.4.204", "91.108.56.161" ],
   "ConnectionsPerThread": 256,
-  "ReceiveBufferSize": 4096,
-  "SelectTimeout": 1000,
+  "ReceiveBufferSize": 65536,
+  "SelectTimeout": 50000,
   "Secret": "00000000000000000000000000000000"
 }

@@ -69,7 +69,6 @@ namespace MTProto.Proxy.Handlers
                     Connection.Close();
                     return;
                 }
-                TelegramSocket.Blocking = false;
 
                 var telegramConnection = new ProxyConnection(TelegramSocket, Connection);
 

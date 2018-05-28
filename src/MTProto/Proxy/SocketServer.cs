@@ -64,7 +64,6 @@ namespace MTProto.Proxy
 
         protected virtual void ProcessAccepted(Socket socket)
         {
-            socket.Blocking = false;
             var connection = new ProxyConnection(socket, Context, Connections);
             Connections.Register(connection);
         }
