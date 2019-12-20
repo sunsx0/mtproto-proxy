@@ -13,6 +13,7 @@ cd mtproto-proxy
 ```
 
 ## Build project
+navigate to the **tgsocks** folder and run these commands
 ```
 dotnet restore src
 dotnet build src -c Release
@@ -34,6 +35,4 @@ vi src/tgsocks/config.json
 ```
 
 ## Start proxy
-```
-dotnet src/tgsocks/bin/Release/netcoreapp2.0/tgsocks.dll src/tgsocks/config.json
-```
+simply click on **tgsocks.exe**
