@@ -3,7 +3,7 @@ MTProto proxy server
 Subscribe us [@tgsocks](https://t.me/tgsocks)
 
 # Requirements
-* Install .NETCore 2.0 first
+* Install .NETCore 3.1 first
 
 # Installation
 ## Clone this repository
